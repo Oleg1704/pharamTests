@@ -34,12 +34,16 @@ describe('Test1', () => {
             cy.get('nb-toastr-container.ng-tns-c209-54 > .ng-tns-c209-54')
             .should('have.css', 'background-color')
             .and('eq', 'rgb(255, 159, 5)')
+
+            cy.get('.cdk-overlay-container .toastr-overlay-container')
+            .should('have.css', 'justify-content', 'flex-end')
+            .should('have.css', 'align-items', 'flex-end')
   
             cy.get('nb-toastr-container.ng-tns-c209-54 > .ng-tns-c209-54 span')
             .should('have.class', 'title')
   
             cy.get('nb-toastr-container.ng-tns-c209-54 > .ng-tns-c209-54 div')
-            .should('have.class', 'message')
+            .should('contain', 'I am the best Qa')
             
           }
     
